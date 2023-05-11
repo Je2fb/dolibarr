@@ -4180,7 +4180,7 @@ class Commande extends CommonOrder
 
 		$now = dol_now();
 
-		return max($this->date, $this->date_livraison) < ($now - $conf->commande->client->warning_delay);
+		return max($this->date, $this->delivery_date) < ($now - $conf->commande->client->warning_delay);
 	}
 
 	/**
